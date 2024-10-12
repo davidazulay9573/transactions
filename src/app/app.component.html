@@ -1,8 +1,26 @@
 <header>
   <nav>
-    <a routerLink="/signin" (click)="onLinkClick()" *ngIf="!isLoggedIn()">Sign In</a>
-    <a routerLink="/signup" (click)="onLinkClick()" *ngIf="!isLoggedIn()">Sign Up</a>
-    <a routerLink="/transactions" (click)="onLinkClick()" *ngIf="isLoggedIn()">Add Transaction</a>
+    <a 
+      routerLink="/signin" 
+      (click)="onLinkClick()" 
+      *ngIf="!isLoggedIn()" 
+      routerLinkActive="active-link">
+      Sign In
+    </a>
+    <a 
+      routerLink="/signup" 
+      (click)="onLinkClick()" 
+      *ngIf="!isLoggedIn()" 
+      routerLinkActive="active-link">
+      Sign Up
+    </a>
+    <a 
+      routerLink="/transactions" 
+      (click)="onLinkClick()" 
+      *ngIf="isLoggedIn()" 
+      routerLinkActive="active-link">
+      Add Transaction
+    </a>
     <button *ngIf="isLoggedIn()" (click)="signOut()">Sign Out</button>
   </nav>
 </header>

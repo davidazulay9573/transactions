@@ -18,3 +18,9 @@
   </div>
   <button type="submit" class="submit-button">Sign Up</button>
 </form>
+
+<div *ngIf="signupSuccess">
+  <p>Sign up successful! Please check your email: 
+    <a [href]="emailLink" target="_blank">{{ email }}</a>
+  </p>
+</div> 
