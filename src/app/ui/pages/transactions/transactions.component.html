@@ -1,0 +1,7 @@
+<app-user-details [userName]="userName" [userBalance]="userBalance"></app-user-details>
+
+<div class="transactions-container"> 
+  <div *ngFor="let transaction of transactions">
+    <app-transaction-card [transaction]="transaction"></app-transaction-card>
+  </div>
+</div>

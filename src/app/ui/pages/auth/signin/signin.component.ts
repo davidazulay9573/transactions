@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-signin',
@@ -26,7 +26,7 @@ export class SigninComponent {
         this.authService.handleSignIn(response.token);
       },
       error: (error) => {
-        console.error('Error during sign-in:', error);
+        alert('Error during sign-in:' + error.message);
       },
     });
   }
